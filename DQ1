@@ -1,0 +1,31 @@
+#include <iostream>
+#include <stdlib.h>     
+#include <time.h>    
+
+using namespace std;
+
+int main() {
+
+srand (time(NULL));
+
+int arr[100];
+for (int i=0; i<100; i++){
+arr[i] = rand() % 500;
+  } 
+
+//these will track for big O and the end product
+int largest;
+int steps;
+int invar;
+
+for (int i=0; i<100; i++){
+if(arr[i] > largest){
+  largest = arr[i];
+  steps++;
+invar = true;
+}
+  } 
+
+cout<<"the largest number is " << largest << " and it took " << steps << " steps to find the answer" <<endl;
+
+}
