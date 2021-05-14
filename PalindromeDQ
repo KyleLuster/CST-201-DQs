@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+void pal(int inital) {
+   int reverse=0,numero;
+
+   //get a copy of our initial value
+   numero = inital;
+
+   while(inital > 0) {
+     //the mod give us the last value
+      reverse = reverse * 10 + inital % 10;
+      inital = inital / 10;
+   }
+
+  //see if what we first had matches up with our reversal
+   if(numero==reverse){
+   cout<<"true"<<endl;
+   }
+   else
+   cout<<"false"<<endl;
+}
+
+int main() {
+   pal(123454321);
+   return 0;
+}
